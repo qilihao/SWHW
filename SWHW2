@@ -1,0 +1,15 @@
+import java.util.*;
+public class H2 {
+    public static void main(String[]agrs){
+        Random rand = new Random();
+        int a;
+        char b[]=new char[11];
+        System.out.println("The password is :");
+        System.out.print("Zz@1");
+        for(int i=0;i<=10;i++){
+            a = rand.nextInt(94)+33;
+            b[i]=(char)a;
+            System.out.print(b[i]);
+        }
+    }
+}
