@@ -31,6 +31,7 @@ swapped_list_head = solution.swapPairs(linked_list)
 # Convert the swapped linked list back to a Python list
 output_list = solution.to_list(swapped_list_head)
 print(output_list)  # Outputs [2, 1, 4, 3]
+```
 
 ## Methods
 
