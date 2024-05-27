@@ -1,0 +1,46 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode(0)
+        dummy.next = head
+        prev = dummy
+
+        while head and head.next:
+            first = head
+            second = head.next
+
+            # Swapping
+            prev.next, first.next, second.next = second, second.next, first
+            
+            # Move to the next pair
+            prev = first
+            head = first.next
+
+        return dummy.next
+
+    # Utility to convert list to linked list
+    def to_linked_list(self, values):
+        head = current = ListNode(0)
+        for value in values:
+            current.next = ListNode(value)
+            current = current.next
+        return head.next
+
+    # Utility to convert linked list to list
+    def to_list(self, node):
+        values = []
+        while node:
+            values.append(node.val)
+            node = node.next
+        return values
+
+# Example usage:
+sol = Solution()
+input_head = sol.to_linked_list([1, 2, 3, 4])
+swapped_head = sol.swapPairs(input_head)
+result = sol.to_list(swapped_head)
+print(result)  # Expected Output: [2, 1, 4, 3]
