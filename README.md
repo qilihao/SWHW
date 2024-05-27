@@ -31,3 +31,26 @@ swapped_list_head = solution.swapPairs(linked_list)
 # Convert the swapped linked list back to a Python list
 output_list = solution.to_list(swapped_list_head)
 print(output_list)  # Outputs [2, 1, 4, 3]
+
+## Methods
+
+### `swapPairs(head: Optional[ListNode]) -> Optional[ListNode]`
+
+- **Purpose**: Swaps every two adjacent nodes in the linked list starting from the head.
+- **Parameters**:
+  - `head`: The head node of the linked list.
+- **Returns**: The head of the modified linked list with swapped pairs.
+
+### `to_linked_list(values: List[int]) -> ListNode`
+
+- **Purpose**: Converts a list of integers into a singly linked list.
+- **Parameters**:
+  - `values`: A list of integers.
+- **Returns**: The head node of the newly created linked list.
+
+### `to_list(node: ListNode) -> List[int]`
+
+- **Purpose**: Converts a singly linked list back into a regular Python list.
+- **Parameters**:
+  - `node`: The head node of the linked list.
+- **Returns**: A list of integers representing the linked list's node values.
